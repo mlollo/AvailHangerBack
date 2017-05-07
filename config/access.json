@@ -1,0 +1,98 @@
+{
+    "home": {
+        "groups": [],
+        "entities": [
+            {
+                "name": "hanger",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            },
+            {
+                "name": "rail",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            },
+            {
+                "name": "stock",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            }
+        ]
+    },
+    "authentication": {
+        "groups": [],
+        "entities": [
+            {
+                "name": "user",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            },
+            {
+                "name": "role",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            },
+            {
+                "name": "group",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            },
+            {
+                "name": "api_credentials",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            },
+            {
+                "name": "access_settings",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            }
+        ]
+    },
+    "products": {
+        "groups": [],
+        "entities": [
+            {
+                "name": "product",
+                "groups": [],
+                "actions": {
+                    "read": [],
+                    "write": [],
+                    "delete": []
+                }
+            }
+        ]
+    }
+}

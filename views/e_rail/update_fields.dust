@@ -1,0 +1,8 @@
+<div id="fields" class="row">
+    <div data-field="f_state" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_state"> {@__ key="entity.e_rail.f_state"/} </label> &nbsp;
+            <br> {@ifTrue key=f_state} <input class="form-control input" name="f_state" value="{f_state}" type="checkbox" checked=""> {:else} <input class="form-control input" name="f_state" value="{f_state}" type="checkbox"> {/ifTrue}
+        </div>
+    </div>
+</div>

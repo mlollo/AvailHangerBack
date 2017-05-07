@@ -1,0 +1,54 @@
+create application AvailHanger
+create module home
+
+create module products
+create entity product
+add entity product
+add field id with type int
+add field style with type string
+add field barcode with type number
+add field sexe with type string
+add field size with type string
+delete field id
+add entity hanger
+delete entity hanger
+seleAccueil
+select module Accueil
+select Accueil
+select module Accueil
+select module Home
+add entity hanger
+add field tringle with type int
+add field barcode with type number
+add field occ with type int
+add entity rail
+create  fieldset hunger-list related to hanger
+create fieldset HungerList related to hanger
+create data entity stock
+select entity rail
+delete tab HungerList
+entity rail has many hanger
+select entity stock
+entity stock has many rail
+add field NbHangMisplaced with type number
+entity stock has many hanger
+
+select entity rail
+select entity stock
+create data entity product
+select entity rail
+add field State with type boolean
+select entity stock
+add widget on entity stock
+add widget info on entity stock
+delete stock has many hanger
+list entity
+list data entity
+list data field
+delete tab hanger
+select entity hanger
+delete field tringle
+add field railId with type int
+add widget info on entity rail
+add widget info on entity hanger
+deploy

@@ -1,0 +1,240 @@
+{
+    "app": {
+        "name": "AvailHanger"
+    },
+    "login": {
+        "log_in": "Log in",
+        "reset_password": {
+            "title": "Forgotten password",
+            "success": "Your password has been reset..",
+            "successMail": "An email allowing you to reset your password has been sent to you.",
+            "userNotExist": "Error, this user does not exist.",
+            "cannotFindToken": "Error, can not find your reset token."
+        },
+        "first_connection": {
+            "title": "First connection",
+            "success": "Update done, you can now log in with your credentials.",
+            "userNotExist": "Error, this user does not exist or has already been activated.",
+            "alreadyHavePassword": "Operation is not possible, this user already has a password.",
+            "passwordNotMatch": "Sorry, passwords do not match. Password must contain at least 4 characters."
+        },
+        "authentication": "Connection",
+        "login": "Login",
+        "password": "Password",
+        "confirm_password": "Confirm password",
+        "mail": "Email",
+        "remember_me": "Remember me",
+        "submit": "Submit"
+    },
+    "settings": {
+        "title": "Settings",
+        "auth_component": {
+            "access_managment": "Access managment per group",
+            "action_managment": "Action managment per role",
+            "moduleList": "Modules",
+            "entityList": "Entities",
+            "grouplist": "Groups:",
+            "rolelist": "Roles:",
+            "entitylist": "Entities:",
+            "group": "Group",
+            "role": "Role",
+            "api_status": "API Status",
+            "api_doc": "API Documentation",
+            "action": {
+                "read": "Show",
+                "write": "Create",
+                "delete": "Delete"
+            }
+        },
+        "legend": "Change your user settings",
+        "lang": "Language",
+        "login": "Login",
+        "email": "Email",
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "phone": "Phone"
+    },
+    "navbar": {
+        "about": "About",
+        "help": "Help",
+        "support": "Support"
+    },
+    "select": {
+        "default": "-- Choose --"
+    },
+    "module": {
+        "home": "Home",
+        "module": "Module",
+        "administration": "Administration",
+        "workspace": "My workspace",
+        "m_home": "Home",
+        "m_authentication": "Authentication",
+        "m_products": "products"
+    },
+    "role": {
+        "administrator": "Administrator",
+        "developer": "Developer"
+    },
+    "button": {
+        "profile": "Profile",
+        "disconnect": "Disconnect",
+        "show": "Show",
+        "update": "Modify",
+        "delete": "Delete",
+        "create": "Create",
+        "list": "List",
+        "add": "Add",
+        "remove": "Remove",
+        "save": "Save",
+        "preview": "Preview",
+        "record": "Record",
+        "execute": "Execute",
+        "settings": "Settings",
+        "download": "Download",
+        "search": "Search",
+        "send": "Send",
+        "validation": "Validate"
+    },
+    "operation": {
+        "show": "Show entity ",
+        "update": "Modify entity ",
+        "create": "Create entity ",
+        "delete": "Delete entity ",
+        "list": "List all ",
+        "add": "Add entity "
+    },
+    "message": {
+        "create": {
+            "success": "Success ! Data registered with success.",
+            "failure": "Error ! No data registered. May ask to your administrator."
+        },
+        "update": {
+            "success": "Success ! Data modified with success.",
+            "failure": "Error ! No data modified. May ask to your administrator."
+        },
+        "delete": {
+            "success": "Success ! Data deleted with success.",
+            "failure": "Error ! No data deleted. May ask to your administrator.",
+            "question": "Are you sure you want to delete this entity ?"
+        },
+        "empty": "No data to display"
+    },
+    "entity": {
+        "e_user": {
+            "label_entity": "User",
+            "name_entity": "User",
+            "plural_entity": "Users",
+            "id_entity": "ID",
+            "f_login": "Login",
+            "f_password": "password",
+            "f_email": "Email",
+            "f_token_password_reset": "token_password_reset",
+            "f_enabled": "enabled",
+            "r_role": "Role",
+            "r_group": "Group"
+        },
+        "e_role": {
+            "label_entity": "Role",
+            "name_entity": "Role",
+            "plural_entity": "Roles",
+            "id_entity": "ID",
+            "f_label": "Label"
+        },
+        "e_group": {
+            "label_entity": "Group",
+            "name_entity": "Group",
+            "plural_entity": "Groups",
+            "id_entity": "ID",
+            "f_label": "Label"
+        },
+        "e_api_credentials": {
+            "label_entity": "API credentials",
+            "name_entity": "API credentials",
+            "plural_entity": "API credentialss",
+            "id_entity": "ID",
+            "f_client_name": "Client Name",
+            "f_client_key": "Client Key",
+            "f_client_secret": "Client Secret",
+            "r_role": "Role",
+            "r_group": "Group",
+            "f_token": "Token",
+            "f_token_timeout_tmsp": "Token timeout TMSP"
+        },
+        "e_product": {
+            "label_entity": "product",
+            "name_entity": "product",
+            "plural_entity": "products",
+            "id_entity": "ID",
+            "f_style": "style",
+            "f_barcode": "barcode",
+            "f_sexe": "sexe",
+            "f_size": "size"
+        },
+        "e_hanger": {
+            "label_entity": "hanger",
+            "name_entity": "hanger",
+            "plural_entity": "hangers",
+            "id_entity": "ID",
+            "f_barcode": "barcode",
+            "f_occ": "occ",
+            "as_r_hungerlist": "HungerList",
+            "as_r_hanger": "hanger",
+            "f_railid": "railId"
+        },
+        "e_rail": {
+            "label_entity": "rail",
+            "name_entity": "rail",
+            "plural_entity": "rails",
+            "id_entity": "ID",
+            "as_r_rail": "rail",
+            "f_state": "State"
+        },
+        "e_stock": {
+            "label_entity": "stock",
+            "name_entity": "stock",
+            "plural_entity": "stocks",
+            "id_entity": "ID",
+            "f_nbhangmisplaced": "NbHangMisplaced"
+        }
+    },
+    "global_component": {
+        "local_file_storage": {
+            "filename": "Filename"
+        },
+        "contact_form": {
+            "firstname": "Firstname",
+            "lastname": "Lastname",
+            "email": "Email",
+            "title": "Title",
+            "content": "Content"
+        },
+        "agenda": {
+            "menu": "Agenda",
+            "add_event": "Add new event",
+            "no_category": "No category",
+            "pending_event": "Pending event(s)"
+        }
+    },
+    "component": {},
+    "defaults": {
+        "widgets": {
+            "lastrecords": {
+                "label": "last records"
+            },
+            "stats": {
+                "more_info": "More info"
+            }
+        }
+    },
+    "error": {
+        "404": {
+            "textone": "The link you followed may be broken, or the page may have been removed."
+        },
+        "title": "Error",
+        "contactAdmin": "Merci de contacter votre administrateur.",
+        "meanwhile": "Meanwhile, you can ",
+        "goHome": "go back to home page",
+        "or": "or",
+        "goBack": " just go back."
+    }
+}

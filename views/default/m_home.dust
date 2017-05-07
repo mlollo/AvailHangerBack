@@ -1,0 +1,120 @@
+{>"layout_m_home"/}
+{<header}
+<h1>
+    {@__ key="module.m_home"/}
+    <small>{@__ key="module.module"/}</small>
+</h1>
+<ol class="breadcrumb">
+    <li>
+        <a href="#">
+            <i class="fa fa-home"></i>
+            {@__ key="module.home"/}
+        </a>
+    </li>
+    <li class="active">
+        {@__ key="module.m_home"/}
+    </li>
+</ol>
+{/header}
+
+{<content}
+<div id="widgets" class="row">
+    <table>
+
+    </table>
+    <div id="info_e_stock_widget" class="col-xs-3">
+        {@entityAccess entity="stock" }
+        <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-folder stock-icon"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">{@__ key="entity.e_stock.label_entity" /}</span>
+                <span class="info-box-number">{e_stock_info}</span>
+            </div>
+        </div>
+        {/entityAccess}
+    </div>
+    <div id="info_e_rail_widget" class="col-xs-3">
+        {@entityAccess entity="rail" }
+        <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-folder rail-icon"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">{@__ key="entity.e_rail.label_entity" /}</span>
+                <span class="info-box-number">{e_rail_info}</span>
+            </div>
+        </div>
+        {/entityAccess}
+    </div>
+    <div id="info_e_hanger_widget" class="col-xs-3">
+        {@entityAccess entity="hanger" }
+        <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-folder hanger-icon"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">{@__ key="entity.e_hanger.label_entity" /}</span>
+                <span class="info-box-number">{e_hanger_info}</span>
+            </div>
+        </div>
+        {/entityAccess}
+    </div>
+</div>
+{/content}
+
+{<custom_js}
+<script type="text/javascript">
+    $(function() {
+        $("table td").each(function() {
+            var self = this;
+            var type = $(self).data('type');
+            var cellValue = $(self).html();
+
+            if (type == 'date') {
+                if (cellValue != "" && cellValue != null && cellValue != "Invalid date" && cellValue != "Invalid Date") {
+                    if (lang_user == "fr-FR") {
+                        cellValue = moment(new Date(cellValue)).format("DD/MM/YYYY");
+                    } else {
+                        cellValue = moment(new Date(cellValue)).format("YYYY-MM-DD");
+                    }
+                } else {
+                    cellValue = "-";
+                }
+            } else if (type == 'datetime') {
+                if (cellValue != "" && cellValue != null && cellValue != "Invalid date" && cellValue != "Invalid Date") {
+                    if (lang_user == "fr-FR") {
+                        cellValue = moment(new Date(cellValue)).format("DD/MM/YYYY HH:mm:ss");
+                    } else {
+                        cellValue = moment(new Date(cellValue)).format("YYYY-MM-DD HH:mm:ss");
+                    }
+                } else {
+                    cellValue = "-";
+                }
+            } else if (type == 'color')
+                cellValue = '<i style="color:' + cellValue + '" class="fa fa-lg fa-circle"></i>';
+            else if (type == 'currency')
+                cellValue = '<span data-type="currency">' + cellValue + '</span>';
+            else if (type == 'email' && (cellValue != null && cellValue != ''))
+                cellValue = '<a href="mailto:' + cellValue + '">' + cellValue + '</a>';
+            else if (type == 'tel' && (cellValue != null && cellValue != ''))
+                cellValue = '<a href="tel:' + cellValue + '">' + cellValue + '</a>';
+            else if (type == 'picture') {
+                $(self).html('');
+                $.ajax({
+                    url: '/default/get_file?entity=' + $(self).parents('table').data('entity') + '&src=' + cellValue,
+                    success: function(data) {
+                        if (data != null && data.data != '') {
+                            console.log(data);
+                            $(self).html('<img src=data:image/;base64,' + data.data + ' />');
+                        } else {
+                            $(self).html('');
+                        }
+                    }
+                });
+                return;
+            }
+
+            $(self).html(cellValue);
+        });
+    });
+</script>
+{/custom_js}

@@ -1,0 +1,27 @@
+<div id="fields" class="row">
+
+    <div data-field="f_style" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_style"> {@__ key="entity.e_product.f_style"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_style" /}' name="f_style" value="{f_style}" type="text">
+        </div>
+    </div>
+    <div data-field="f_barcode" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_barcode"> {@__ key="entity.e_product.f_barcode"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_barcode" /}' name="f_barcode" value="{f_barcode}" type="number">
+        </div>
+    </div>
+    <div data-field="f_sexe" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_sexe"> {@__ key="entity.e_product.f_sexe"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_sexe" /}' name="f_sexe" value="{f_sexe}" type="text">
+        </div>
+    </div>
+    <div data-field="f_size" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_size"> {@__ key="entity.e_product.f_size"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_size" /}' name="f_size" value="{f_size}" type="text">
+        </div>
+    </div>
+</div>

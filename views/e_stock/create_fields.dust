@@ -1,0 +1,8 @@
+<div id="fields" class="row">
+    <div data-field="f_nbhangmisplaced" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_nbhangmisplaced"> {@__ key="entity.e_stock.f_nbhangmisplaced"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_stock.f_nbhangmisplaced" /}' name="f_nbhangmisplaced" value="" type="number">
+        </div>
+    </div>
+</div>

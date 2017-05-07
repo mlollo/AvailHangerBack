@@ -1,0 +1,28 @@
+<div id="fields" class="row">
+
+    <div data-field="f_railid" class="col-xs-12 col-md-12 col-sm-12 column" style="">
+        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
+            <div class="form-group">
+                <label for="f_railid"> {@__ key="entity.e_hanger.f_railid"/} </label>
+                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_railid" /}' name="f_railid" value="" type="number">
+            </div>
+        </div>
+    </div>
+    <div data-field="f_barcode" class="col-xs-12 col-md-12 col-sm-12 column">
+        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
+            <div class="form-group">
+                <label for="f_barcode"> {@__ key="entity.e_hanger.f_barcode"/} </label>
+                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_barcode" /}' name="f_barcode" value="" type="number">
+            </div>
+        </div>
+    </div>
+    <div data-field="f_occ" class="col-xs-12 col-md-12 col-sm-12 column">
+        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
+            <div class="form-group">
+                <label for="f_occ"> {@__ key="entity.e_hanger.f_occ"/} </label>
+                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_occ" /}' name="f_occ" value="" type="number">
+            </div>
+        </div>
+    </div>
+
+</div>

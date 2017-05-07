@@ -1,0 +1,240 @@
+{
+    "app": {
+        "name": "AvailHanger"
+    },
+    "login": {
+        "log_in": "Log in",
+        "reset_password": {
+            "title": "Mot de passe oublié",
+            "success": "Votre mot de passe a bien été reinitialisé.",
+            "successMail": "Un email vous permettant de réinitialiser votre mot de passe vous a bien été envoyé.",
+            "userNotExist": "Erreur, cet utilisateur n'existe pas.",
+            "cannotFindToken": "Erreur, impossible de retrouver votre token de réinitialisation."
+        },
+        "first_connection": {
+            "title": "Première connexion",
+            "success": "Mise à jour effectuée, vous pouvez désormais vous connecter avec vos identifiants.",
+            "userNotExist": "Erreur, cet utilisateur n'existe pas ou a déjà été activé.",
+            "alreadyHavePassword": "Opération impossible, cet utilisateur possède déjà un mot de passe.",
+            "passwordNotMatch": "Désolé, les mots de passe ne correspondent pas. Le mot de passe doit faire minimum 4 caractères."
+        },
+        "authentication": "Connexion",
+        "login": "Login",
+        "password": "Mot de passe",
+        "confirm_password": "Confirmation du mot de passe",
+        "mail": "Mail",
+        "remember_me": "Se souvenir de moi",
+        "submit": "Soumettre"
+    },
+    "settings": {
+        "title": "Paramètres",
+        "auth_component": {
+            "access_managment": "Gestion des accès par groupe",
+            "action_managment": "Gestion des actions par rôle",
+            "moduleList": "Les modules",
+            "entityList": "Les entités",
+            "grouplist": "Groupes:",
+            "rolelist": "Rôles:",
+            "entitylist": "Entités:",
+            "group": "Groupe",
+            "role": "Rôle",
+            "api_status": "Status de l'API",
+            "api_doc": "Documentation de l'API",
+            "action": {
+                "read": "Afficher",
+                "write": "Créer",
+                "delete": "Supprimer"
+            }
+        },
+        "legend": "Modifier vos paramètres",
+        "lang": "Langue",
+        "login": "Login",
+        "email": "Email",
+        "firstname": "Prénom",
+        "lastname": "Nom",
+        "phone": "Téléphone"
+    },
+    "navbar": {
+        "about": "A propos",
+        "help": "Aide",
+        "support": "Support"
+    },
+    "select": {
+        "default": "-- Choisir --"
+    },
+    "module": {
+        "home": "Accueil",
+        "module": "Module",
+        "administration": "Administration",
+        "workspace": "Espace de travail",
+        "m_home": "Accueil",
+        "m_authentication": "Authentification",
+        "m_products": "products"
+    },
+    "role": {
+        "administrator": "Administrateur",
+        "developer": "Développeur"
+    },
+    "button": {
+        "profile": "Profil",
+        "disconnect": "Se déconnecter",
+        "show": "Afficher",
+        "update": "Modifier",
+        "delete": "Supprimer",
+        "create": "Créer",
+        "list": "Lister",
+        "add": "Ajouter",
+        "remove": "Retirer",
+        "save": "Sauvegarder",
+        "preview": "Prévisualiser",
+        "record": "Enregistrer",
+        "execute": "Exécuter",
+        "settings": "Paramètres",
+        "download": "Télécharger",
+        "search": "Rechercher",
+        "send": "Envoyer",
+        "validation": "Valider"
+    },
+    "operation": {
+        "show": "Afficher une entité ",
+        "update": "Modifier une entité ",
+        "create": "Créer une entité ",
+        "delete": "Supprimer une entité ",
+        "list": "Lister les ",
+        "add": "Ajouter une entité "
+    },
+    "message": {
+        "create": {
+            "success": "Succès ! L'enregistrement a été créé en base de données.",
+            "failure": "Erreur ! L'enregistrement n'a pas été créé en base de données. Veuillez contacter votre administrateur."
+        },
+        "update": {
+            "success": "Succès ! L'enregistrement a été modifié en base de données.",
+            "failure": "Erreur ! L'enregistrement n'a pas été modifié en base de données. Veuillez contacter votre administrateur."
+        },
+        "delete": {
+            "success": "Succès ! L'enregistrement a été supprimé en base de données.",
+            "failure": "Erreur ! L'enregistrement n'a pas été supprimé en base de données. Veuillez contacter votre administrateur.",
+            "question": "Êtes-vous sûr de vouloir supprimer cette entité ?"
+        },
+        "empty": "Aucune donnée à afficher"
+    },
+    "entity": {
+        "e_user": {
+            "label_entity": "Utilisateur",
+            "name_entity": "Utilisateur",
+            "plural_entity": "Utilisateurs",
+            "id_entity": "ID",
+            "f_login": "Identifiant",
+            "f_password": "password",
+            "f_email": "Email",
+            "f_token_password_reset": "token_password_reset",
+            "f_enabled": "enabled",
+            "r_role": "Rôle",
+            "r_group": "Groupe"
+        },
+        "e_role": {
+            "label_entity": "Rôle",
+            "name_entity": "Rôle",
+            "plural_entity": "Rôles",
+            "id_entity": "ID",
+            "f_label": "Libellé"
+        },
+        "e_group": {
+            "label_entity": "Groupe",
+            "name_entity": "Groupe",
+            "plural_entity": "Groupes",
+            "id_entity": "ID",
+            "f_label": "Libellé"
+        },
+        "e_api_credentials": {
+            "label_entity": "Identifiant d'API",
+            "name_entity": "Identifiant d'API",
+            "plural_entity": "Identifiant d'API",
+            "id_entity": "ID",
+            "f_client_name": "Client Name",
+            "f_client_key": "Client Key",
+            "f_client_secret": "Client Secret",
+            "r_role": "Rôle",
+            "r_group": "Groupe",
+            "f_token": "Token",
+            "f_token_timeout_tmsp": "Token timeout TMSP"
+        },
+        "e_product": {
+            "label_entity": "product",
+            "name_entity": "product",
+            "plural_entity": "products",
+            "id_entity": "ID",
+            "f_style": "style",
+            "f_barcode": "barcode",
+            "f_sexe": "sexe",
+            "f_size": "size"
+        },
+        "e_hanger": {
+            "label_entity": "hanger",
+            "name_entity": "hanger",
+            "plural_entity": "hangers",
+            "id_entity": "ID",
+            "f_barcode": "barcode",
+            "f_occ": "occ",
+            "as_r_hungerlist": "HungerList",
+            "as_r_hanger": "hanger",
+            "f_railid": "railId"
+        },
+        "e_rail": {
+            "label_entity": "rail",
+            "name_entity": "rail",
+            "plural_entity": "rails",
+            "id_entity": "ID",
+            "as_r_rail": "rail",
+            "f_state": "State"
+        },
+        "e_stock": {
+            "label_entity": "stock",
+            "name_entity": "stock",
+            "plural_entity": "stocks",
+            "id_entity": "ID",
+            "f_nbhangmisplaced": "NbHangMisplaced"
+        }
+    },
+    "global_component": {
+        "local_file_storage": {
+            "filename": "Nom du fichier"
+        },
+        "contact_form": {
+            "firstname": "Prénom",
+            "lastname": "Nom",
+            "email": "Email",
+            "title": "Titre",
+            "content": "Contenu"
+        },
+        "agenda": {
+            "menu": "Agenda",
+            "add_event": "Ajouter un événement",
+            "no_category": "Pas de catégorie",
+            "pending_event": "Évévement en attente"
+        }
+    },
+    "component": {},
+    "defaults": {
+        "widgets": {
+            "lastrecords": {
+                "label": "derniers enregistrements"
+            },
+            "stats": {
+                "more_info": "Plus d'infos"
+            }
+        }
+    },
+    "error": {
+        "404": {
+            "textone": "Le lien que vous avez suivi peut être incorrect ou la page peut avoir été supprimée."
+        },
+        "title": "Erreur",
+        "contactAdmin": "Merci de contacter votre administrateur.",
+        "meanwhile": "Entre temps, vous pouvez ",
+        "goHome": "retourner à la page d'accueil",
+        "or": "ou",
+        "goBack": " revenir en arrière."
+    }
+}

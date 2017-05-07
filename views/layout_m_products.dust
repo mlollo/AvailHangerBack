@@ -1,0 +1,41 @@
+{>"main_layout"/}
+{<modules}
+<select id="dynamic_select" class="form-control select" onchange="navigate()">{@moduleAccess module="home"}<option data-module="m_home" value="/default/home">{@__ key="module.m_home" /}</option>{/moduleAccess}{@moduleAccess module="authentication"}<option data-module="m_authentication" value="/default/authentication">{@__ key="module.m_authentication" /}</option>{/moduleAccess}{@moduleAccess module="products"}<option data-module="m_products" value="/default/products" selected="">{@__ key="module.m_products" /}</option>{/moduleAccess}</select>
+{/modules}
+
+{<sidebar}
+<ul id="sortable" class="sidebar-menu" style="white-space: pre-wrap;">
+    {@entityAccess entity="product"}
+    <li id="product_menu_item" style="display:block;" class="treeview">
+        <a href="#">
+            <i class="fa fa-folder"></i>
+            <span>{@__ key="entity.e_product.label_entity" /}</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            {@actionAccess entity="product" action="write"}
+            <li>
+                <a href="/product/create_form">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.create" /}
+                    {@__ key="entity.e_product.name_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+            {@actionAccess entity="product" action="read"}
+            <li>
+                <a href="/product/list">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.list" /}
+                    {@__ key="entity.e_product.plural_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+        </ul>
+    </li>
+    {/entityAccess}
+    {@entityAccess entity="hanger"}
+
+    {/entityAccess}
+</ul>
+{/sidebar}

@@ -1,0 +1,60 @@
+<div id="fields" class="row">
+
+    <div data-field="f_style" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_style"> {@__ key="entity.e_product.f_style"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_style" /}' name="f_style" value="{f_style}" type="text" readonly="">
+        </div>
+    </div>
+    <div data-field="f_barcode" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_barcode"> {@__ key="entity.e_product.f_barcode"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_barcode" /}' name="f_barcode" value="{f_barcode}" type="number" readonly="">
+        </div>
+    </div>
+    <div data-field="f_sexe" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_sexe"> {@__ key="entity.e_product.f_sexe"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_sexe" /}' name="f_sexe" value="{f_sexe}" type="text" readonly="">
+        </div>
+    </div>
+    <div data-field="f_size" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_size"> {@__ key="entity.e_product.f_size"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_product.f_size" /}' name="f_size" value="{f_size}" type="text" readonly="">
+        </div>
+    </div>
+</div>
+<div class="actions">
+    <form action="/product/delete" method="post">
+        <div class="quicklinks">
+            <span>
+                <button class="btn btn-danger">
+                    <i class="fa fa-trash-o fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.delete"/}</span>
+            </button>
+            <input name="id" type="hidden" value="{e_product.id}" class="form-control">
+            </span>
+            <span>
+                <a href="/product/update_form?id={e_product.id}" class="btn btn-warning">
+                    <i class="fa fa-pencil fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.update"/}</span>
+            </a>
+            </span>
+            {^hideButton}
+            <span>
+                    <a href="/product/create_form" class="btn btn-success">
+                        <i class="fa fa-plus fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.create"/}</span>
+            </a>
+            </span>
+            <span>
+                    <a href="/product/list" type="submit" class="btn btn-primary">
+                        <i class="fa fa-list fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.list"/}</span>
+            </a>
+            </span>
+            {/hideButton}
+        </div>
+    </form>
+</div>

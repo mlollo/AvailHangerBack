@@ -1,0 +1,8 @@
+[
+    {
+        "target": "e_rail",
+        "relation": "hasMany",
+        "foreignKey": "f_id_stock",
+        "as": "r_rail"
+    }
+]

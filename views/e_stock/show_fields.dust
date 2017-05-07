@@ -1,0 +1,74 @@
+<div class="nav-tabs-custom" id="tabs">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a data-toggle="tab" href="#home">
+                {@__ key="entity.e_stock.label_entity" /}
+            </a>
+        </li>
+        <li>
+            <a id="r_rail-click" data-toggle="tab" href="#r_rail">
+                {@__ key="entity.e_rail.as_r_rail" /}
+            </a>
+        </li>
+
+    </ul>
+    <div class="tab-content" style="min-height:275px;">
+        <div id="home" class="tab-pane fade in active">
+            <div id="fields" class="row">
+                <div data-field="f_nbhangmisplaced" class="col-xs-12">
+                    <div class="form-group">
+                        <label for="f_nbhangmisplaced"> {@__ key="entity.e_stock.f_nbhangmisplaced"/} </label>
+                        <input class="form-control input" placeholder='{@__ key="entity.e_stock.f_nbhangmisplaced" /}' name="f_nbhangmisplaced" value="{f_nbhangmisplaced}" type="number" readonly="">
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <form action="/stock/delete" method="post">
+                    <div class="quicklinks">
+                        <span>
+                <button class="btn btn-danger">
+                    <i class="fa fa-trash-o fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.delete"/}</span>
+                        </button>
+                        <input name="id" type="hidden" value="{e_stock.id}" class="form-control">
+                        </span>
+                        <span>
+                <a href="/stock/update_form?id={e_stock.id}" class="btn btn-warning">
+                    <i class="fa fa-pencil fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.update"/}</span>
+                        </a>
+                        </span>
+                        {^hideButton}
+                        <span>
+                    <a href="/stock/create_form" class="btn btn-success">
+                        <i class="fa fa-plus fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.create"/}</span>
+                        </a>
+                        </span>
+                        <span>
+                    <a href="/stock/list" type="submit" class="btn btn-primary">
+                        <i class="fa fa-list fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.list"/}</span>
+                        </a>
+                        </span>
+                        {/hideButton}
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="r_rail" class="tab-pane fade">
+            {#r_rail e_rail=r_rail}
+            {@eq key=id value=e_rail[0].id}
+            {>"e_rail/list_fields" associationAlias="r_rail" associationForeignKey="f_id_stock" associationFlag="{e_stock.id}" associationSource="e_stock" associationUrl="stock" for="hasMany" /}
+            {/eq}
+            {:else}
+            {>"e_rail/list_fields" /}
+            {/r_rail}
+            <br>
+            <a href="/rail/create_form?associationAlias=r_rail&amp;associationForeignKey=f_id_stock&amp;associationFlag={e_stock.id}&amp;associationSource=e_stock&amp;associationUrl=stock" class="btn btn-success">
+                <i class="fa fa-plus fa-md">&nbsp;&nbsp;</i><span>{@__ key="button.create"/}</span>
+            </a>
+        </div>
+
+    </div>
+</div>

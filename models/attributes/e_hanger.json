@@ -1,0 +1,22 @@
+{
+    "id": {
+        "type": "INTEGER",
+        "autoIncrement": true,
+        "primaryKey": true
+    },
+    "version": {
+        "type": "INTEGER"
+    },
+    "f_barcode": {
+        "type": "INTEGER",
+        "newmipsType": "number"
+    },
+    "f_occ": {
+        "type": "INTEGER",
+        "newmipsType": "int"
+    },
+    "f_railid": {
+        "type": "INTEGER",
+        "newmipsType": "int"
+    }
+}

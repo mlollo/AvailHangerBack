@@ -1,0 +1,74 @@
+<div class="nav-tabs-custom" id="tabs">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a data-toggle="tab" href="#home">
+                {@__ key="entity.e_rail.label_entity" /}
+            </a>
+        </li>
+
+        <li>
+            <a id="r_hanger-click" data-toggle="tab" href="#r_hanger">
+                {@__ key="entity.e_hanger.as_r_hanger" /}
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content" style="min-height:275px;">
+        <div id="home" class="tab-pane fade in active">
+            <div id="fields" class="row">
+                <div data-field="f_state" class="col-xs-12">
+                    <div class="form-group">
+                        <label for="f_state"> {@__ key="entity.e_rail.f_state"/} </label> &nbsp;
+                        <br> {@ifTrue key=f_state} <input class="form-control input" name="f_state" value="{f_state}" type="checkbox" checked="" disabled=""> {:else} <input class="form-control input" name="f_state" value="{f_state}" type="checkbox" disabled="">                        {/ifTrue}
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <form action="/rail/delete" method="post">
+                    <div class="quicklinks">
+                        <span>
+                <button class="btn btn-danger">
+                    <i class="fa fa-trash-o fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.delete"/}</span>
+                        </button>
+                        <input name="id" type="hidden" value="{e_rail.id}" class="form-control">
+                        </span>
+                        <span>
+                <a href="/rail/update_form?id={e_rail.id}" class="btn btn-warning">
+                    <i class="fa fa-pencil fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.update"/}</span>
+                        </a>
+                        </span>
+                        {^hideButton}
+                        <span>
+                    <a href="/rail/create_form" class="btn btn-success">
+                        <i class="fa fa-plus fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.create"/}</span>
+                        </a>
+                        </span>
+                        <span>
+                    <a href="/rail/list" type="submit" class="btn btn-primary">
+                        <i class="fa fa-list fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.list"/}</span>
+                        </a>
+                        </span>
+                        {/hideButton}
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="r_hanger" class="tab-pane fade">
+            {#r_hanger e_hanger=r_hanger}
+            {@eq key=id value=e_hanger[0].id}
+            {>"e_hanger/list_fields" associationAlias="r_hanger" associationForeignKey="f_id_rail" associationFlag="{e_rail.id}" associationSource="e_rail" associationUrl="rail" for="hasMany" /}
+            {/eq}
+            {:else}
+            {>"e_hanger/list_fields" /}
+            {/r_hanger}
+            <br>
+            <a href="/hanger/create_form?associationAlias=r_hanger&amp;associationForeignKey=f_id_rail&amp;associationFlag={e_rail.id}&amp;associationSource=e_rail&amp;associationUrl=rail" class="btn btn-success">
+                <i class="fa fa-plus fa-md">&nbsp;&nbsp;</i><span>{@__ key="button.create"/}</span>
+            </a>
+        </div>
+    </div>
+</div>

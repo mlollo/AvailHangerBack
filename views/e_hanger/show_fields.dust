@@ -1,0 +1,61 @@
+<div id="fields" class="row">
+
+    <div data-field="f_railid" class="col-xs-12 col-md-12 col-sm-12 column" style="">
+        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
+            <div class="form-group">
+                <label for="f_railid"> {@__ key="entity.e_hanger.f_railid"/} </label>
+                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_railid" /}' name="f_railid" value="{f_railid}" readonly="" type="number">
+            </div>
+        </div>
+    </div>
+    <div data-field="f_barcode" class="col-xs-12 col-md-12 col-sm-12 column">
+        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
+            <div class="form-group">
+                <label for="f_barcode"> {@__ key="entity.e_hanger.f_barcode"/} </label>
+                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_barcode" /}' name="f_barcode" value="{f_barcode}" readonly="" type="number">
+            </div>
+        </div>
+    </div>
+    <div data-field="f_occ" class="col-xs-12 col-md-12 col-sm-12 column">
+        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
+            <div class="form-group">
+                <label for="f_occ"> {@__ key="entity.e_hanger.f_occ"/} </label>
+                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_occ" /}' name="f_occ" value="{f_occ}" readonly="" type="number">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="actions" style="">
+    <form action="/hanger/delete" method="post">
+        <div class="quicklinks">
+            <span>
+                <button class="btn btn-danger">
+                    <i class="fa fa-trash-o fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.delete"/}</span>
+            </button>
+            <input name="id" value="{e_hanger.id}" class="form-control" type="hidden">
+            </span>
+            <span>
+                <a href="/hanger/update_form?id={e_hanger.id}" class="btn btn-warning">
+                    <i class="fa fa-pencil fa-md">&nbsp;&nbsp;</i>
+                    <span>{@__ key="button.update"/}</span>
+            </a>
+            </span>
+            {^hideButton}
+            <span>
+                    <a href="/hanger/create_form" class="btn btn-success">
+                        <i class="fa fa-plus fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.create"/}</span>
+            </a>
+            </span>
+            <span>
+                    <a href="/hanger/list" type="submit" class="btn btn-primary">
+                        <i class="fa fa-list fa-md">&nbsp;&nbsp;</i>
+                        <span>{@__ key="button.list"/}</span>
+            </a>
+            </span>
+            {/hideButton}
+        </div>
+    </form>
+</div>

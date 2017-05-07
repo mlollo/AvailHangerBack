@@ -1,0 +1,96 @@
+{>"main_layout"/}
+{<modules}
+<select id="dynamic_select" class="form-control select" onchange="navigate()">{@moduleAccess module="home"}<option data-module="m_home" value="/default/home" selected="">{@__ key="module.m_home" /}</option>{/moduleAccess}{@moduleAccess module="authentication"}<option data-module="m_authentication" value="/default/authentication">{@__ key="module.m_authentication" /}</option>{/moduleAccess}{@moduleAccess module="products"}<option data-module="m_products" value="/default/products">{@__ key="module.m_products" /}</option>{/moduleAccess}</select>
+{/modules}
+
+{<sidebar}
+<ul id="sortable" class="sidebar-menu" style="white-space: pre-wrap;">
+    {@entityAccess entity="hanger"}
+    <li id="hanger_menu_item" style="display:block;" class="treeview">
+        <a href="#">
+            <i class="fa fa-folder"></i>
+            <span>{@__ key="entity.e_hanger.label_entity" /}</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            {@actionAccess entity="hanger" action="write"}
+            <li>
+                <a href="/hanger/create_form">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.create" /}
+                    {@__ key="entity.e_hanger.name_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+            {@actionAccess entity="hanger" action="read"}
+            <li>
+                <a href="/hanger/list">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.list" /}
+                    {@__ key="entity.e_hanger.plural_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+        </ul>
+    </li>
+    {/entityAccess}
+    {@entityAccess entity="rail"}
+    <li id="rail_menu_item" style="display:block;" class="treeview">
+        <a href="#">
+            <i class="fa fa-folder"></i>
+            <span>{@__ key="entity.e_rail.label_entity" /}</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            {@actionAccess entity="rail" action="write"}
+            <li>
+                <a href="/rail/create_form">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.create" /}
+                    {@__ key="entity.e_rail.name_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+            {@actionAccess entity="rail" action="read"}
+            <li>
+                <a href="/rail/list">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.list" /}
+                    {@__ key="entity.e_rail.plural_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+        </ul>
+    </li>
+    {/entityAccess}
+    {@entityAccess entity="stock"}
+    <li id="stock_menu_item" style="display:block;" class="treeview">
+        <a href="#">
+            <i class="fa fa-folder"></i>
+            <span>{@__ key="entity.e_stock.label_entity" /}</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            {@actionAccess entity="stock" action="write"}
+            <li>
+                <a href="/stock/create_form">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.create" /}
+                    {@__ key="entity.e_stock.name_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+            {@actionAccess entity="stock" action="read"}
+            <li>
+                <a href="/stock/list">
+                    <i class="fa fa-angle-double-right"></i>
+                    {@__ key="operation.list" /}
+                    {@__ key="entity.e_stock.plural_entity" /}
+                </a>
+            </li>
+            {/actionAccess}
+        </ul>
+    </li>
+    {/entityAccess}
+</ul>
+{/sidebar}

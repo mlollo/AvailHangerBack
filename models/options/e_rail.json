@@ -1,0 +1,8 @@
+[
+    {
+        "target": "e_hanger",
+        "relation": "hasMany",
+        "foreignKey": "f_id_rail",
+        "as": "r_hanger"
+    }
+]

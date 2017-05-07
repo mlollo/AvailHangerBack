@@ -1,0 +1,26 @@
+{
+    "id": {
+        "type": "INTEGER",
+        "autoIncrement": true,
+        "primaryKey": true
+    },
+    "version": {
+        "type": "INTEGER"
+    },
+    "f_style": {
+        "type": "STRING",
+        "newmipsType": "string"
+    },
+    "f_barcode": {
+        "type": "INTEGER",
+        "newmipsType": "number"
+    },
+    "f_sexe": {
+        "type": "STRING",
+        "newmipsType": "string"
+    },
+    "f_size": {
+        "type": "STRING",
+        "newmipsType": "string"
+    }
+}
