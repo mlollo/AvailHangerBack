@@ -45,7 +45,8 @@
  * @apiSuccess {Integer} hangers.version <code>version</code> of hanger
  * @apiSuccess {Integer} hangers.f_barcode <code>f_barcode</code> of hanger
  * @apiSuccess {Integer} hangers.f_occ <code>f_occ</code> of hanger
- * @apiSuccess {Integer} hangers.f_railid <code>f_railid</code> of hanger
+ * @apiSuccess {Boolean} hangers.f_connected <code>f_connected</code> of hanger
+ * @apiSuccess {Integer} hangers.f_rail <code>f_rail</code> of hanger
  * @apiSuccess {Integer} limit Limit used to fetch data
  * @apiSuccess {Integer} offset Offset used to fetch data
  * @apiSuccess {Integer} totalCount The total count of records for hanger
@@ -63,7 +64,8 @@
  * @apiSuccess {Integer} hanger.version <code>version</code> of hanger
  * @apiSuccess {Integer} hanger.f_barcode <code>f_barcode</code> of hanger
  * @apiSuccess {Integer} hanger.f_occ <code>f_occ</code> of hanger
- * @apiSuccess {Integer} hanger.f_railid <code>f_railid</code> of hanger
+ * @apiSuccess {Boolean} hanger.f_connected <code>f_connected</code> of hanger
+ * @apiSuccess {Integer} hanger.f_rail <code>f_rail</code> of hanger
  * @apiError (Error 404) {Object} NotFound No hanger with ID <code>id</code> found
  */
 
@@ -75,12 +77,14 @@
  * @apiUse token
  * @apiParam (Body parameters) {Integer} [f_barcode] <code>f_barcode</code> of hanger
  * @apiParam (Body parameters) {Integer} [f_occ] <code>f_occ</code> of hanger
- * @apiParam (Body parameters) {Integer} [f_railid] <code>f_railid</code> of hanger
+ * @apiParam (Body parameters) {Boolean} [f_connected] <code>f_connected</code> of hanger
+ * @apiParam (Body parameters) {Integer} [f_rail] <code>f_rail</code> of hanger
  * @apiSuccess {Object} hanger Created hanger
  * @apiSuccess {Integer} hanger.id <code>id</code> of hanger
  * @apiSuccess {Integer} hanger.f_barcode <code>f_barcode</code> of hanger
  * @apiSuccess {Integer} hanger.f_occ <code>f_occ</code> of hanger
- * @apiSuccess {Integer} hanger.f_railid <code>f_railid</code> of hanger
+ * @apiSuccess {Boolean} hanger.f_connected <code>f_connected</code> of hanger
+ * @apiSuccess {Integer} hanger.f_rail <code>f_rail</code> of hanger
  * @apiError (Error 500) {Object} ServerError An error occured when trying to create hanger
  */
 
@@ -93,12 +97,14 @@
  * @apiParam (Params parameters) {Integer} id <code>id</code> of the hanger to update
  * @apiParam (Body parameters) {Integer} [f_barcode] New value of <code>f_barcode</code> for hanger
  * @apiParam (Body parameters) {Integer} [f_occ] New value of <code>f_occ</code> for hanger
- * @apiParam (Body parameters) {Integer} [f_railid] New value of <code>f_railid</code> for hanger
+ * @apiParam (Body parameters) {Boolean} [f_connected] New value of <code>f_connected</code> for hanger
+ * @apiParam (Body parameters) {Integer} [f_rail] New value of <code>f_rail</code> for hanger
  * @apiSuccess {Object} hanger Updated hanger
  * @apiSuccess {Integer} hanger.id <code>id</code> of hanger
  * @apiSuccess {Integer} hanger.f_barcode <code>f_barcode</code> of hanger
  * @apiSuccess {Integer} hanger.f_occ <code>f_occ</code> of hanger
- * @apiSuccess {Integer} hanger.f_railid <code>f_railid</code> of hanger
+ * @apiSuccess {Boolean} hanger.f_connected <code>f_connected</code> of hanger
+ * @apiSuccess {Integer} hanger.f_rail <code>f_rail</code> of hanger
  * @apiError (Error 404) {Object} NotFound No hanger with ID <code>id</code> found
  * @apiError (Error 500) {Object} ServerError An error occured when trying to update hanger
  */

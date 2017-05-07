@@ -15,7 +15,11 @@
         "type": "INTEGER",
         "newmipsType": "int"
     },
-    "f_railid": {
+    "f_connected": {
+        "type": "BOOLEAN",
+        "newmipsType": "boolean"
+    },
+    "f_rail": {
         "type": "INTEGER",
         "newmipsType": "int"
     }

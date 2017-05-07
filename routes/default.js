@@ -82,7 +82,88 @@ router.get('/home', block_access.isLoggedIn, block_access.moduleAccessMiddleware
 	}));
 	// *** Widget call e_hanger info end | Do not remove ***
 
+	// *** Widget call e_stock stats start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_stock.count().then(function(result){
+			resolve({e_stock_stats: result});
+		});
+	}));
+	// *** Widget call e_stock stats end | Do not remove ***
+
+	// *** Widget call e_rail stats start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_rail.count().then(function(result){
+			resolve({e_rail_stats: result});
+		});
+	}));
+	// *** Widget call e_rail stats end | Do not remove ***
+
+	// *** Widget call e_hanger stats start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.count().then(function(result){
+			resolve({e_hanger_stats: result});
+		});
+	}));
+	// *** Widget call e_hanger stats end | Do not remove ***
+
+	// *** Widget call e_hanger lastrecords start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.findAll({limit: 10, order: "id DESC"}).then(function(result){
+			resolve({e_hanger_lastrecords: result});
+		});
+	}));
+	// *** Widget call e_hanger lastrecords end | Do not remove ***
+
+	// *** Widget call e_hanger lastrecords start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.findAll({limit: 10, order: "id DESC"}).then(function(result){
+			resolve({e_hanger_lastrecords: result});
+		});
+	}));
+	// *** Widget call e_hanger lastrecords end | Do not remove ***
+
+	// *** Widget call e_hanger lastrecords start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.findAll({limit: 10, order: "id DESC"}).then(function(result){
+			resolve({e_hanger_lastrecords: result});
+		});
+	}));
+	// *** Widget call e_hanger lastrecords end | Do not remove ***
+
+	// *** Widget call e_hanger lastrecords start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.findAll({limit: 10, order: "id DESC"}).then(function(result){
+			resolve({e_hanger_lastrecords: result});
+		});
+	}));
+	// *** Widget call e_hanger lastrecords end | Do not remove ***
+
+	// *** Widget call e_hanger lastrecords start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.findAll({limit: 10, order: "id DESC"}).then(function(result){
+			resolve({e_hanger_lastrecords: result});
+		});
+	}));
+	// *** Widget call e_hanger lastrecords end | Do not remove ***
+
+	// *** Widget call e_hanger lastrecords start | Do not remove ***
+	widgetPromises.push(new Promise(function(resolve, reject){
+		models.E_hanger.findAll({limit: 10, order: "id DESC"}).then(function(result){
+			resolve({e_hanger_lastrecords: result});
+		});
+	}));
+	// *** Widget call e_hanger lastrecords end | Do not remove ***
+
 	// *** Widget module m_home | Do not remove ***
+
+
+
+
+
+
+
+
+
 
 
 

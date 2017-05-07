@@ -52,3 +52,25 @@ add field railId with type int
 add widget info on entity rail
 add widget info on entity hanger
 deploy
+select entity hanger
+add field onRail with type boolean
+add widget stat on entity stock
+remove widget info on entity stock
+remove widget info
+remove widget
+delete tab widget info
+add widget stat on entity rail
+add widget stat on entity hanger
+    add widget last records on entity hanger limited to 10 records with columns barcode, occ, raildId, onRail
+    add widget last records on entity hanger limited to 10 records with columns occ, raildId, onRail
+    add widget last records on entity hanger limited to 10 records with columns railId
+    add widget last records on entity hanger limited to 10 records with columns railId
+    add widget last records on entity hanger limited to 10 records with columns railId, onRail, occ
+    add widget last records on entity hanger limited to 10 records with columns occ, railId
+delete field railId
+add field depositRail with type int
+deploy
+delete field onRail
+add field connected with type boolean
+delete field depositRail
+add field rail with type int

@@ -609,10 +609,17 @@
           },
           {
             "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "hanger.f_connected",
+            "description": "<p><code>f_connected</code> of hanger</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "Integer",
             "optional": false,
-            "field": "hanger.f_railid",
-            "description": "<p><code>f_railid</code> of hanger</p>"
+            "field": "hanger.f_rail",
+            "description": "<p><code>f_rail</code> of hanger</p>"
           }
         ]
       }
@@ -681,10 +688,17 @@
           },
           {
             "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "hangers.f_connected",
+            "description": "<p><code>f_connected</code> of hanger</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "Integer",
             "optional": false,
-            "field": "hangers.f_railid",
-            "description": "<p><code>f_railid</code> of hanger</p>"
+            "field": "hangers.f_rail",
+            "description": "<p><code>f_rail</code> of hanger</p>"
           },
           {
             "group": "Success 200",
@@ -769,10 +783,17 @@
           },
           {
             "group": "Body parameters",
+            "type": "Boolean",
+            "optional": true,
+            "field": "f_connected",
+            "description": "<p><code>f_connected</code> of hanger</p>"
+          },
+          {
+            "group": "Body parameters",
             "type": "Integer",
             "optional": true,
-            "field": "f_railid",
-            "description": "<p><code>f_railid</code> of hanger</p>"
+            "field": "f_rail",
+            "description": "<p><code>f_rail</code> of hanger</p>"
           }
         ],
         "Query parameters": [
@@ -819,10 +840,17 @@
           },
           {
             "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "hanger.f_connected",
+            "description": "<p><code>f_connected</code> of hanger</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "Integer",
             "optional": false,
-            "field": "hanger.f_railid",
-            "description": "<p><code>f_railid</code> of hanger</p>"
+            "field": "hanger.f_rail",
+            "description": "<p><code>f_rail</code> of hanger</p>"
           }
         ]
       }
@@ -879,10 +907,17 @@
           },
           {
             "group": "Body parameters",
+            "type": "Boolean",
+            "optional": true,
+            "field": "f_connected",
+            "description": "<p>New value of <code>f_connected</code> for hanger</p>"
+          },
+          {
+            "group": "Body parameters",
             "type": "Integer",
             "optional": true,
-            "field": "f_railid",
-            "description": "<p>New value of <code>f_railid</code> for hanger</p>"
+            "field": "f_rail",
+            "description": "<p>New value of <code>f_rail</code> for hanger</p>"
           }
         ],
         "Query parameters": [
@@ -929,10 +964,17 @@
           },
           {
             "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "hanger.f_connected",
+            "description": "<p><code>f_connected</code> of hanger</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "Integer",
             "optional": false,
-            "field": "hanger.f_railid",
-            "description": "<p><code>f_railid</code> of hanger</p>"
+            "field": "hanger.f_rail",
+            "description": "<p><code>f_rail</code> of hanger</p>"
           }
         ]
       }

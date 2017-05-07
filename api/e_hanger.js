@@ -150,10 +150,16 @@ router.put('/:id', function(req, res) {
             answer.error = err;
             res.status(500).json(answer);
         });
+
+        // if(e_hanger.f_onRail){
+            
+        // }
+
     }).catch(function(err){
         answer.error = err;
         res.status(500).json(answer);
     });
+
 });
 
 //

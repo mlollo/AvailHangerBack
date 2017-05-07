@@ -13,8 +13,13 @@
             <th data-field="f_occ" data-col="f_occ" data-type="integer">
                 {@__ key="entity.e_hanger.f_occ"/}
             </th>
-            <th data-field="f_railid" data-col="f_railid" data-type="integer">
-                {@__ key="entity.e_hanger.f_railid"/}
+
+
+            <th data-field="f_connected" data-col="f_connected" data-type="boolean">
+                {@__ key="entity.e_hanger.f_connected"/}
+            </th>
+            <th data-field="f_rail" data-col="f_rail" data-type="integer">
+                {@__ key="entity.e_hanger.f_rail"/}
             </th>
             <th></th>
             <th></th>
@@ -34,8 +39,13 @@
             <th data-field="f_occ" data-col="f_occ" data-type="integer">
                 {@__ key="entity.e_hanger.f_occ"/}
             </th>
-            <th data-field="f_railid" data-col="f_railid" data-type="integer">
-                {@__ key="entity.e_hanger.f_railid"/}
+
+
+            <th data-field="f_connected" data-col="f_connected" data-type="boolean">
+                {@__ key="entity.e_hanger.f_connected"/}
+            </th>
+            <th data-field="f_rail" data-col="f_rail" data-type="integer">
+                {@__ key="entity.e_hanger.f_rail"/}
             </th>
             <th></th>
             <th></th>
@@ -49,7 +59,11 @@
 
             <td data-field="f_barcode" data-type="integer">{f_barcode}</td>
             <td data-field="f_occ" data-type="integer">{f_occ}</td>
-            <td data-field="f_railid" data-type="integer">{f_railid}</td>
+
+
+
+            <td data-field="f_connected" data-type="boolean">{f_connected}</td>
+            <td data-field="f_rail" data-type="integer">{f_rail}</td>
             <td>
                 {@eq key=for value="fieldset"}
                 <form class="fieldsetform">

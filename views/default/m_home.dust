@@ -22,38 +22,51 @@
     <table>
 
     </table>
-    <div id="info_e_stock_widget" class="col-xs-3">
-        {@entityAccess entity="stock" }
-        <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-folder stock-icon"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">{@__ key="entity.e_stock.label_entity" /}</span>
-                <span class="info-box-number">{e_stock_info}</span>
-            </div>
-        </div>
-        {/entityAccess}
-    </div>
-    <div id="info_e_rail_widget" class="col-xs-3">
-        {@entityAccess entity="rail" }
-        <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-folder rail-icon"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">{@__ key="entity.e_rail.label_entity" /}</span>
-                <span class="info-box-number">{e_rail_info}</span>
-            </div>
-        </div>
-        {/entityAccess}
-    </div>
-    <div id="info_e_hanger_widget" class="col-xs-3">
+    <div id="lastrecords_e_hanger_widget" class="col-xs-6">
         {@entityAccess entity="hanger" }
-        <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-folder hanger-icon"></i></span>
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title">
+                    {@__ key="entity.e_hanger.label_entity" /}&nbsp;
+                    {@__ key="defaults.widgets.lastrecords.label" /}
+                </h3>
 
-            <div class="info-box-content">
-                <span class="info-box-text">{@__ key="entity.e_hanger.label_entity" /}</span>
-                <span class="info-box-number">{e_hanger_info}</span>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+
+            <div class="box-body" style="display: block;">
+                <table id="hanger_lastrecords" class="table table-striped" data-entity="e_hanger">
+                    <thead>
+                        <tr>
+                            <th data-type="integer">
+                                <!--{@__ key="entity.e_hanger.f_id_rail" /}-->
+								Id rail
+                            </th>
+							<th data-type="boolean">
+                                <!--{@__ key="entity.e_hanger.f_onRail" /}-->
+								Is on rail
+                            </th>
+							 <th data-type="integer">
+                                <!--@__ key="entity.e_hanger.f_occ" /}-->
+								 Picked up
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#e_hanger_lastrecords}
+                        <tr>
+                            <td data-type="integer">{f_id_rail}</td>
+							<td data-type="boolean">{f_onRail}</td>
+							<td data-type="integer">{f_occ}</td>
+                        </tr>
+						{/e_hanger_lastrecords}
+                    </tbody>
+                </table>
+                <a class="btn btn-success" href="/hanger/create_form" style="margin-top:10px;">
+                    {@__ key="button.create" /}
+                </a>
             </div>
         </div>
         {/entityAccess}

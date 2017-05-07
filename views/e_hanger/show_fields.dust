@@ -1,13 +1,8 @@
 <div id="fields" class="row">
 
-    <div data-field="f_railid" class="col-xs-12 col-md-12 col-sm-12 column" style="">
-        <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
-            <div class="form-group">
-                <label for="f_railid"> {@__ key="entity.e_hanger.f_railid"/} </label>
-                <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_railid" /}' name="f_railid" value="{f_railid}" readonly="" type="number">
-            </div>
-        </div>
-    </div>
+
+
+
     <div data-field="f_barcode" class="col-xs-12 col-md-12 col-sm-12 column">
         <div class="ge-content ge-content-type-tinymce" data-ge-content-type="tinymce">
             <div class="form-group">
@@ -25,6 +20,23 @@
         </div>
     </div>
 
+
+
+    <div data-field="f_connected" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_connected"> {@__ key="entity.e_hanger.f_connected"/} </label> &nbsp;
+            <br>
+            {@ifTrue key=f_connected}<input class="form-control input" name="f_connected" value="{f_connected}" type="checkbox" checked="" disabled="">
+            {:else}<input class="form-control input" name="f_connected" value="{f_connected}" type="checkbox" disabled="">
+            {/ifTrue}
+        </div>
+    </div>
+    <div data-field="f_rail" class="col-xs-12">
+        <div class="form-group">
+            <label for="f_rail"> {@__ key="entity.e_hanger.f_rail"/} </label>
+            <input class="form-control input" placeholder='{@__ key="entity.e_hanger.f_rail" /}' name="f_rail" value="{f_rail}" type="number" readonly="">
+        </div>
+    </div>
 </div>
 <div class="actions" style="">
     <form action="/hanger/delete" method="post">

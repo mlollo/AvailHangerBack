@@ -179,7 +179,8 @@
             "f_occ": "occ",
             "as_r_hungerlist": "HungerList",
             "as_r_hanger": "hanger",
-            "f_railid": "railId"
+            "f_connected": "connected",
+            "f_rail": "rail"
         },
         "e_rail": {
             "label_entity": "rail",
